@@ -1,0 +1,32 @@
+<app-header2></app-header2>
+
+<p>paycash works!</p>
+
+
+<h2>Shipping Address 2</h2>
+
+<div class="form-group ">
+    <label for="Name "> Name</label>
+    <input type="text " class="form-control name " id="Name " placeholder="Recevier Name " name="Name " [(ngModel)]="paybycash.name" />
+</div>
+
+<div class="form-group ">
+    <label for="address "> address</label>
+    <input type="text " class="form-control address " id="Name " placeholder="Recevier address " name="Address " [(ngModel)]="paybycash.address" />
+</div>
+
+<div class="form-group">
+    <label for="city">City</label>
+    <select class="form-control" id="city">
+      <option>Noida</option>
+     
+    </select>
+  </div>
+    
+     <div class="col-xs-4 ">
+         <div class="form-group ">
+             <label for="Zipcode "> Zipcode</label>
+             <input type="text " class="form-control " id="Zipcode " placeholder="Zipcode " name="Zipcode " [(ngModel)]="paybycash.Zipcode " />
+         </div>
+     </div>
+ <button class="btn btn-success" (click)="Onsubmit()">Submit</button>

@@ -1,0 +1,47 @@
+<button (click)="continue()">Continue</button>
+<button (click)="checkout()">Checkout</button>
+
+<body>
+    <div class ="container" id="centered">
+
+        <table border="1" class="table table-striped" id="customers">
+            <thead>
+            <tr>
+           
+              <th>Product Name</th>
+              <th>Product Weight</th>
+              <th>Product Price</th>
+              <th>Quantity</th>
+            
+
+        
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cl of items">
+                   
+                    <td>{{cl.fname}}</td>
+                    <td>{{cl.fweight}}</td>
+                    <td>{{cl.fprice}}</td>
+                   <td> <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+                    <div class="input-group plus-minus-input">
+
+                      <input (input)="onChange($event.target.value,cl);" class="input-group-field" type="number" name="quantity" value={{cl.quantity}} min="1" max="10" >
+
+                  
+                    </div>
+                    
+                     </td>
+                     
+                    </tr>
+                    
+            </tbody>
+
+
+            <div>Total={{total}}</div>
+              </table>
+        
+    
+    </div>
+    
+</body>

@@ -1,0 +1,29 @@
+<p>feedback works!</p>
+
+
+<h1>Feedback...!!!</h1>
+
+<form method="post" action="/users/feedback">
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input [(ngModel)] = "feedback.email" class="form-control"
+
+placeholder="Email" name="email">
+
+</div> 
+
+<div class="form-group">
+
+<label for="examplecomments">Enter Text</label>
+
+<textarea [(ngModel)]= "feedback.comments" class="form-control" placeholder="Enter Feedback" id="examplecomments" rows="5" name="comments"></textarea>
+
+</div>
+
+
+<button type="submit" (click)="submitfeedback()"class="btn btn-default">Submit</button>
+
+</form>
